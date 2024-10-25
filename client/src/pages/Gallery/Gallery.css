@@ -9,7 +9,7 @@
 }
 
 .gallery-intro .text {
-  @apply text-[1.5rem] text-left md:text-[1.6rem] sm:text-center;
+  @apply text-[1.5rem] md:text-[1.6rem];
 }
 
 .gallery_grid {
