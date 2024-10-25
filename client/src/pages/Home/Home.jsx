@@ -41,6 +41,14 @@ const Home = () => {
       })
       .catch((error) => console.error("Error fetching prices:", error));
   }, []);
+  
+  useEffect(() => {
+    const videoElement = document.querySelector(".video-element");
+    if (window.innerWidth > 1024) {
+      videoElement.setAttribute("autoplay", true);
+      videoElement.play();
+    }
+  }, []);
 
   // Fuction to initialize payment
   const initiatePayment = async () => {
@@ -398,9 +406,8 @@ const Home = () => {
           <div className="w-[50%] h-fit shadow-inner hidden lg:block">
             <video
               muted
-              autoPlay
               loop
-              className="w-full h-full shadow-2xl rounded-2xl"
+              className="video-element w-full h-full shadow-2xl rounded-2xl"
             >
               <source src={assets.bookingVid} type="video/mp4" />
               Your browser does not support the video tag.
