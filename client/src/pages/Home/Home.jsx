@@ -42,6 +42,25 @@ const Home = () => {
   }, [hash]);
 
   useEffect(() => {
+<<<<<<< HEAD
+    const videoElement = document.querySelector(".video-element");
+    if (window.innerWidth > 1024) {
+      videoElement.setAttribute("autoplay", true);
+      videoElement.play();
+    }
+=======
+    // Fetch service prices when the component mounts
+    axios
+      .get("https://barbiie-lashes-server.onrender.com/api/prices")
+      .then((response) => {
+        const data = response.data;
+        setServices(data);
+      })
+      .catch((error) => console.error("Error fetching prices:", error));
+>>>>>>> 1699780c5ff5a2d2af9aace5b57ca13574035ed5
+  }, []);
+  
+  useEffect(() => {
     const videoElement = document.querySelector(".video-element");
     if (window.innerWidth > 1024) {
       videoElement.setAttribute("autoplay", true);
@@ -56,7 +75,7 @@ const Home = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:8080/api/payment/initialize",
+        "https://barbiie-lashes-server.onrender.com/api/payment/initialize",
         {
           amount,
           email,
@@ -95,7 +114,7 @@ const Home = () => {
   const verifyPayment = async (reference) => {
     try {
       const response = await axios.get(
-        `http://localhost:8080/api/payment/verify/${reference}`,
+        `https://barbiie-lashes-server.onrender.com/api/payment/verify/${reference}`,
         {
           headers: { "Content-Type": "application/json" },
         }

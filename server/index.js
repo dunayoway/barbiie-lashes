@@ -1,11 +1,3 @@
-// const express = require("express");
-// const dotenv = require("dotenv");
-// const cors = require("cors");
-// const mongoose = require("mongoose");
-// const axios = require("axios");
-// const prices = require("./controller/prices");
-// const Appointment = require("./model/appointment");
-// dotenv.config();
 import express from "express";
 import "dotenv/config.js";
 import cors from "cors";
@@ -21,7 +13,7 @@ app.use(cors());
 app.use(express.json());
 
 mongoose
-  .connect("mongodb://localhost:27017/ClusterA")
+  .connect(process.env.MONGO_URI)
   .then(() => console.log("Connected to the MongoDB database."))
   .catch((error) => console.error("MongoDB connection error:", error));
 

@@ -5,7 +5,11 @@
 }
 
 .gallery-intro .title {
+<<<<<<< HEAD
   @apply text-[3.5rem] sm:text-[4.5rem] md:text-[6rem] underline decoration-2 underline-offset-4;
+=======
+  @apply text-[3.9rem] sm:text-[4.5rem] md:text-[6rem] underline decoration-2 underline-offset-4;
+>>>>>>> 1699780c5ff5a2d2af9aace5b57ca13574035ed5
 }
 
 .gallery-intro .text {
