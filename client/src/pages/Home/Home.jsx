@@ -23,6 +23,16 @@ const Home = () => {
   const today = new Date().toISOString().split("T")[0];
 
   useEffect(() => {
+    axios
+      .get("http://localhost:8080/api/prices")
+      .then((response) => {
+        const data = response.data;
+        setServices(data);
+      })
+      .catch((error) => console.error("Error fetching prices:", error));
+  }, []);
+
+  useEffect(() => {
     if (hash) {
       const element = document.getElementById(hash.substring(1));
       if (element) {
@@ -32,14 +42,11 @@ const Home = () => {
   }, [hash]);
 
   useEffect(() => {
-    // Fetch service prices when the component mounts
-    axios
-      .get("http://localhost:8080/api/prices")
-      .then((response) => {
-        const data = response.data;
-        setServices(data);
-      })
-      .catch((error) => console.error("Error fetching prices:", error));
+    const videoElement = document.querySelector(".video-element");
+    if (window.innerWidth > 1024) {
+      videoElement.setAttribute("autoplay", true);
+      videoElement.play();
+    }
   }, []);
 
   // Fuction to initialize payment
@@ -398,9 +405,8 @@ const Home = () => {
           <div className="w-[50%] h-fit shadow-inner hidden lg:block">
             <video
               muted
-              autoPlay
               loop
-              className="w-full h-full shadow-2xl rounded-2xl"
+              className="video-element w-full h-full shadow-2xl rounded-2xl"
             >
               <source src={assets.bookingVid} type="video/mp4" />
               Your browser does not support the video tag.
