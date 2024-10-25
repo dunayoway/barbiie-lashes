@@ -34,7 +34,7 @@ const Home = () => {
   useEffect(() => {
     // Fetch service prices when the component mounts
     axios
-      .get("http://localhost:8080/api/prices")
+      .get("https://barbiie-lashes-server.onrender.com/api/prices")
       .then((response) => {
         const data = response.data;
         setServices(data);
@@ -49,7 +49,7 @@ const Home = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:8080/api/payment/initialize",
+        "https://barbiie-lashes-server.onrender.com/api/payment/initialize",
         {
           amount,
           email,
@@ -88,7 +88,7 @@ const Home = () => {
   const verifyPayment = async (reference) => {
     try {
       const response = await axios.get(
-        `http://localhost:8080/api/payment/verify/${reference}`,
+        `https://barbiie-lashes-server.onrender.com/api/payment/verify/${reference}`,
         {
           headers: { "Content-Type": "application/json" },
         }
