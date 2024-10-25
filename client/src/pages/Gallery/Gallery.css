@@ -5,7 +5,7 @@
 }
 
 .gallery-intro .title {
-  @apply text-[3.5rem] sm:text-[4.5rem] md:text-[6rem] underline decoration-2 underline-offset-4;
+  @apply text-[3.9rem] sm:text-[4.5rem] md:text-[6rem] underline decoration-2 underline-offset-4;
 }
 
 .gallery-intro .text {
