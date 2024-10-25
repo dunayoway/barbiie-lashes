@@ -1,0 +1,80 @@
+.hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.65)),
+    url("../../assets/images/hero-bg2.jpg");
+  @apply h-[90vh] text-[1.6rem] md:text-[1.8rem] bg-no-repeat bg-center bg-cover flex items-center justify-center;
+}
+
+.hero > div > div {
+  @apply max-w-[900px] h-full text-[#F7E7CE] text-center flex flex-col items-center justify-center gap-[40px] md:gap-[30px] mx-auto;
+}
+
+.hero__title {
+  @apply text-[6.5rem] md:text-[7rem] leading-[0.85] sm:leading-[1] text-[#F7E7CE];
+  font-family: "Cormorant Garamond", serif;
+}
+
+.hero__text {
+  @apply text-[1.4rem] leading-[1.5] md:text-[1.6rem] mb-[50px];
+}
+
+.hero__btn {
+  @apply border-solid border py-[16px] px-[24px] hover:text-[#333333] hover:bg-[#F7E7CE] hover:border-[#333333] hover:rounded-3xl duration-500;
+}
+
+.booking form div {
+  @apply my-[10px] relative;
+}
+
+.booking form label {
+  font-family: "Cormorant Garamond", serif;
+}
+
+.booking form input,
+.booking form select {
+  @apply w-full py-[10px] px-[15px] border-2 border-[#cfc8c8] rounded-2xl bg-transparent outline-[#33333390] text-[#333333] placeholder-[#33333390] text-[16px] font-medium;
+}
+
+.booking form span {
+  position: absolute;
+  bottom: 14px;
+  right: 10px;
+  font-size: 9px;
+  color: red;
+}
+
+.booking form span i {
+  font-size: 14px;
+  color: seagreen;
+}
+
+select option {
+  @apply text-[#333333];
+}
+
+#date-error,
+#time-error,
+#service-error,
+#price,
+#submit-error {
+  bottom: -15px;
+  left: 0;
+}
+
+#price {
+  bottom: -20px;
+  font-size: 14px;
+  color: seagreen;
+}
+
+@media (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(
+        to left,
+        rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 0.75)
+      ),
+      url("../../assets/images/her0-bg-dsktp.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+}

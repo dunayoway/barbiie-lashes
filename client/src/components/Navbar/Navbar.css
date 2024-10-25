@@ -1,0 +1,19 @@
+.nav {
+  @apply py-[1rem] pl-4 duration-500;
+}
+
+.nav__list {
+  @apply flex flex-col gap-4 md:flex-row md:items-center md:gap-[30px];
+}
+
+.nav__link {
+  @apply text-[1.8rem] uppercase text-[#943e4b] duration-500 hover:text-[#333333e1];
+  font-family: "Cormorant Garamond", serif;
+}
+
+.nav-btn {
+  @apply text-[1.4rem] md:text-[1.8rem] uppercase bg-[#943e4b] text-[#FAF9F6] rounded-full md:rounded-[4px] md:hover:rounded-3xl py-[6px] px-[10px] md:py-[10px] md:px-[20px] transition-all ease-in-out hover:bg-[#943e4be3] hover:text-[#fff] duration-500;
+  font-family: "Cormorant Garamond", serif;
+}
+
+

@@ -1,0 +1,9 @@
+.slick-initialized {
+  overflow: hidden;
+}
+
+@media (min-width: 480px) {
+  .slick-slide > div {
+    @apply mx-[1px];
+  }
+}

@@ -1,0 +1,56 @@
+main {
+  @apply flex flex-col min-h-screen;
+}
+
+.header {
+  @apply bg-[#f7e7ced3] md:bg-[#f7e7ce] py-8 shadow-md md:h-[10vh] flex items-center z-10;
+}
+
+.logo {
+  @apply w-[100px] h-[50px];
+}
+
+.menu-icon {
+  @apply text-4xl text-[#943e4b];
+}
+
+.navbar-container {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: max-height 0.5s ease, transform 0.5s ease, opacity 0.5s ease;
+}
+
+.navbar-container.show {
+  max-height: 195px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.footer {
+  @apply bg-[#333333] text-[#F7E7CE] text-[1.6rem] sm:text-[1.8rem] min-h-[10vh] pt-[20px];
+  font-family: "Cormorant Garamond", serif;
+}
+
+.footer__text {
+  @apply w-full text-center text-[#F7E7CE] text-[1.4rem] sm:text-[1.6rem] font-light;
+}
+
+.footer__link {
+  @apply hover:underline;
+}
+
+.footer-address,
+.footer-social {
+  font-family: "Cormorant Garamond", serif;
+}
+
+footer h3 {
+  font-family: "Poppins", sans-serif;
+  color: #943e4b;
+}
+
+.footer a {
+  @apply flex items-center gap-[5px] w-fit;
+}
