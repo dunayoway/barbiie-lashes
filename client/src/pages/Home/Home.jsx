@@ -10,7 +10,6 @@ import OpenHours from "../../components/OpenHours/OpenHours";
 const Home = () => {
   const { hash } = useLocation();
   const paystackPublicKey = import.meta.env.VITE_PAYSTACK_PUBLIC_KEY;
-  const [inputType, setInputType] = useState("text");
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const today = new Date().toISOString().split("T")[0];
@@ -167,10 +166,6 @@ const Home = () => {
       phone: <i className="fas fa-check-circle"></i>,
     }));
     return true;
-  };
-
-  const handleDateFocus = () => {
-    setInputType("date");
   };
 
   const validateDate = () => {
@@ -338,12 +333,10 @@ const Home = () => {
                       Date
                     </label>
                     <input
-                      type={inputType}
+                      type="date"
                       name="date"
                       min={today}
                       id="date"
-                      placeholder="select a date"
-                      onFocus={handleDateFocus}
                       value={date}
                       onChange={(e) => setDate(e.target.value)}
                       onKeyUp={validateDate}
