@@ -13,14 +13,14 @@ const Home = () => {
   const [inputType, setInputType] = useState("text");
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
-  const [date, setDate] = useState("");
+  const today = new Date().toISOString().split("T")[0];
+  const [date, setDate] = useState(today);
   const [time, setTime] = useState("15:00");
   const [selectedService, setSelectedService] = useState(null);
   const [selectedPrice, setSelectedPrice] = useState(null);
   const [services, setServices] = useState([]);
   const [errors, setErrors] = useState({});
   const [submitError, setSubmitError] = useState("");
-  const today = new Date().toISOString().split("T")[0];
 
   useEffect(() => {
     axios
@@ -56,7 +56,7 @@ const Home = () => {
       })
       .catch((error) => console.error("Error fetching prices:", error));
   }, []);
-  
+
   useEffect(() => {
     const videoElement = document.querySelector(".video-element");
     if (window.innerWidth > 1024) {
