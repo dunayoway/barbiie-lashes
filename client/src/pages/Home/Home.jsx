@@ -42,13 +42,11 @@ const Home = () => {
   }, [hash]);
 
   useEffect(() => {
-<<<<<<< HEAD
     const videoElement = document.querySelector(".video-element");
     if (window.innerWidth > 1024) {
       videoElement.setAttribute("autoplay", true);
       videoElement.play();
     }
-=======
     // Fetch service prices when the component mounts
     axios
       .get("https://barbiie-lashes-server.onrender.com/api/prices")
@@ -57,7 +55,6 @@ const Home = () => {
         setServices(data);
       })
       .catch((error) => console.error("Error fetching prices:", error));
->>>>>>> 1699780c5ff5a2d2af9aace5b57ca13574035ed5
   }, []);
   
   useEffect(() => {
