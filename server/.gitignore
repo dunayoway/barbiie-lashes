@@ -18,8 +18,12 @@ dist-ssr
 !.vscode/extensions.json
 .idea
 .DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
+Thumbs.db
+
+# Directory for temporary files
+tmp/
+temp/
+
+# Build output directories
+dist/
+build/
