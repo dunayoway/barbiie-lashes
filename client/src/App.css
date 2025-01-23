@@ -7,7 +7,7 @@ main {
 }
 
 .logo {
-  @apply w-[100px] h-[50px];
+  @apply w-[100px] h-[50px] relative left-[-30%];
 }
 
 .menu-icon {
